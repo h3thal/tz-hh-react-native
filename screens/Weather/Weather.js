@@ -1,9 +1,9 @@
 import React from 'react';
 import {ScrollView, StyleSheet, View} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
-import MainContainer from '../../components/MainContainer/MainContainer';
 import CONSTANTS from '../../assets/CONSTANTS';
 import ListContainer from '../../components/ListContainer/ListContainer';
+import MainContainer from '../../components/MainContainer/MainContainer';
 
 const Weather = () => {
   const weatherList = useSelector(state => state.weatherList);

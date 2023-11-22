@@ -2,8 +2,8 @@ import React, {memo} from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import CONSTANTS from '../../assets/CONSTANTS';
 import {useDispatch, useSelector} from 'react-redux';
-import IconWeather from '../UI/IconWeather';
 import DropDownList from '../DropDownList/DropDownList';
+import IconWeather from '../UI/IconWeather';
 
 const MainContainer = () => {
   const dispatch = useDispatch();

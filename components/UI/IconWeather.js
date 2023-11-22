@@ -17,8 +17,12 @@ const IconWeather = ({size, color}) => {
   ];
 
   const checkWeatherConditions = useMemo(() => {
-    if (weatherList?.current_weather?.weathercode) {
+    if (
+      weatherList?.current_weather?.weathercode &&
+      weatherList.current_weather.weathercode >= 0
+    ) {
       for (let i = 0; i < weatherConditions.length; i++) {
+        console.log(i);
         if (
           weatherConditions[i].includes(weatherList.current_weather.weathercode)
         ) {
@@ -26,7 +30,7 @@ const IconWeather = ({size, color}) => {
         }
       }
     }
-  }, [weatherList]);
+  }, [weatherList.current_weather]);
 
   const weatherIcon = [
     <Sun size={size} color={color} />,

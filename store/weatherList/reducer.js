@@ -11,6 +11,8 @@ export default (state = initState, action) => {
       };
     case 'pushFromApi':
       return {...state, ...action.payload};
+    case 'errorApi':
+      return {...state, gprs: 1, error: action.payload.error};
     case 'updateDropdown':
       return {...state, gprs: action.payload.gprs};
     default:

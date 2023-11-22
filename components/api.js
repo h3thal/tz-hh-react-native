@@ -11,8 +11,10 @@ export const fetchDataSuccess = data => ({
 });
 
 export const fetchDataError = error => ({
-  type: 'FETCH_DATA_ERROR',
-  payload: error,
+  type: 'errorApi',
+  payload: {
+    error: error,
+  },
 });
 
 export const getWeatherFromApi = (lati, long) => async dispatch => {
@@ -27,7 +29,7 @@ export const getWeatherFromApi = (lati, long) => async dispatch => {
       },
     );
     const json = await response.json();
-    // console.log(json);
+    console.log(json);
     dispatch(fetchDataSuccess(json));
     //
     // console.log(json);
